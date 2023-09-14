@@ -9,9 +9,6 @@ function Teas() {
                 const result = await (
                     await fetch("/api/v1/tea/all")
                 ).json();
-
-                console.log("ça console.log");
-
                 setDatas(result);
             } catch (error) {
                 console.log(error);
