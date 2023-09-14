@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+
+}
+
+/*  */
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-transform: uppercase;
+    display: block;
+    padding: 10px;
+}
+
+.active {
+    text-decoration: overline;
+}
+
+/*  */
+
+section {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section h2,
+section p {
+    width: 100%;
+}
+
+article {
+    padding: 10px;
+}
