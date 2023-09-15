@@ -53,5 +53,30 @@ section p {
 }
 
 article {
+    width: 30%;
     padding: 10px;
+}
+
+article img {
+    max-width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    margin: auto;
+}
+
+form * {
+    margin: 5px;
+}
+
+/*  */
+
+.ribbon {
+    max-width: 5%;
+    position: absolute;
+    right: 0;
+    top: 0;
 }

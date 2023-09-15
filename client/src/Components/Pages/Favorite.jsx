@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function TeaCard({category}) {
+function Favorite() {
 
     const [datas, setDatas] = useState(null);
 
@@ -8,7 +8,7 @@ function TeaCard({category}) {
         async function getData() {
             try {
                 const result = await (
-                    await fetch("/api/v1/tea/all")
+                    await fetch("/api/v1/tea/favorite")
                 ).json();
                 setDatas(result);
             } catch (error) {
@@ -19,22 +19,21 @@ function TeaCard({category}) {
         getData();
     }, []);
 
-    return(
+    return (
         <>
             {!datas ? (
                 <p>LOADING ...</p>
             ) : (
-                datas.map((data) => (
                 <article>
-                    <h3>{data.label_1}</h3>
-                    <img src={data.url_image} alt={data.label_1} />
+                    <h3>{datas[0].label_1}</h3>
+                    <img src={datas[0].url_image} alt={datas[0].label_1} />
+                    <p>{datas[0].description}</p>
                     <p>A partir de</p>
-                    <a href="">Voir ce produit</a>
+                    <a href={"the/" + datas[0].url_tea + "/" + datas[0].id}>Voir ce produit</a>
                 </article>
-                ))
             )}
         </>
     )
 }
 
-export default TeaCard;
+export default Favorite;

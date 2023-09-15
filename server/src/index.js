@@ -13,9 +13,9 @@ const app = express();
 // app.set("views", "./src/views").set("view engine", "ejs");
 app.use(express.json())
     .use(cors())
-    .use(router);
-    // .use(express.static("public"))
-    // .use(express.urlencoded({ extended: true }))
+    .use(router)
+    .use(express.static("public"))
+    .use(express.urlencoded({ extended: true }))
     // .use(session({
     //     secret: process.env.SK,
     //     resave: false,
